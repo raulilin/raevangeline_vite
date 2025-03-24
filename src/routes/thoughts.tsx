@@ -5,6 +5,7 @@ import { getRandomIntCryp } from '../utils/utils'
 import fadeStyle from './Fade.module.css'
 import ClientPosts from '../components/textpost'
 import { useEffect, useState } from 'react'
+import ExemploForm from '../components/formthoughts'
 
 export const Route = createFileRoute('/thoughts')({
   component: RouteComponent,
@@ -48,10 +49,17 @@ function RouteComponent() {
           <main className="grid sm:grid-cols-3">
               <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white h-fit">
                   <div className="border-2 border-white-900 h-full items-center h-fit">
-                      <Poem/>
-                      <Poem/>
-                      <Poem/>
+                      
                   </div>
+                  <div className="border-2 border-white h-full h-fit">
+                      <div className="flex border-b-2 border-white p-1 text-lg">
+                          random pic no#{idTest + 1}
+                          <p className="ml-auto">X</p>
+                      </div>
+                      <div className="flex items-center p-6 justify-center">
+                            <ExemploForm/>
+                      </div>            
+                  </div>                   
 
                   <div className="border-2 border-white h-full h-fit">
                       <div className="flex border-b-2 border-white p-1 text-lg">

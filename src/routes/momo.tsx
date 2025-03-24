@@ -5,7 +5,6 @@ import { Topbar } from '../components/top'
  import { AudioPlayer, AudioPlayerRef } from 'react-audio-play'
 import { useRef, useState } from 'react'
 import { getRandomInt } from '../utils/utils'
-import logo from './logo.png';
 
 export const Route = createFileRoute('/momo')({
   component: RouteComponent,
@@ -17,20 +16,20 @@ function RouteComponent() {
         {value: "/meeting_place.mp3" },
         {value: "/limerance.mp3" },
         {value: "/you_were_there.mp3" },
-        {value: "/arabesque.mp3" },        
+        {value: "/arabesque.mp3" },
     ];
 
     const [song, setSong] = useState<any>(["/meeting_place.mp3"]);
 
     const handleEnd = () => {
-        setSong(ost[getRandomInt(0,ost.length)].value)  
-        handlePlay()              
+        setSong(ost[getRandomInt(0,ost.length)].value)
+        handlePlay()
     };
 
     const handlePlay = () => {
         playerRef.current?.play();
     };
-    
+
     handlePlay();
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
@@ -40,8 +39,8 @@ function RouteComponent() {
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'scroll'
-            }}             
-    >        
+            }}
+    >
         <Topbar/>
 
         <div className= {`w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15 `}>
