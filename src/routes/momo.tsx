@@ -5,6 +5,7 @@ import { Topbar } from '../components/top'
  import { AudioPlayer, AudioPlayerRef } from 'react-audio-play'
 import { useRef, useState } from 'react'
 import { getRandomInt } from '../utils/utils'
+import logo from './logo.png';
 
 export const Route = createFileRoute('/momo')({
   component: RouteComponent,
@@ -34,7 +35,7 @@ function RouteComponent() {
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/flowerwarm.jpeg)",
+                backgroundImage: "url(/flowerwarm.webp)",
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',

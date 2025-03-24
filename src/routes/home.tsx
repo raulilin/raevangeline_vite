@@ -6,12 +6,14 @@ import { NekoButton } from '../components/nekobutton';
 import { Poem } from '../components/poem';
 import { RandomLainPic } from '../components/randomlain';
 import Log from '../components/log';
+import { preload } from 'react-dom';
 
 export const Route = createFileRoute('/home')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
+    preload('flowerwarm.webp', { as: 'image' }) // preloads this stylesheet
     let sideImg = getRandomIntCryp(0,7) + 1
 
     return (
