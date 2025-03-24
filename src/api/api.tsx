@@ -21,7 +21,6 @@ export async function getPoems(): Promise<poems[] | null>  {
   const { data } = await supabase
     .from('v_poems')
     .select()
-    console.log("asd")
   return data
 }
 

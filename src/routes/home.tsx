@@ -13,14 +13,13 @@ export const Route = createFileRoute('/home')({
 
 function RouteComponent() {
     let sideImg = getRandomIntCryp(0,7) + 1
-    console.log(sideImg)
 
     return (
-    <div className={`w-full h-full flex-grow text-white font-teste bg-black ${fadeStyle.fade} 4xl:h-screen`}>     
+    <div className={`w-full h-full flex-grow text-white font-teste bg-black ${fadeStyle.fade} 5xl:h-screen`}>     
         <Topbar/>
 
         <main className="grid md:flex">
-        <div className='flex ml-auto mr-auto'>
+        <div className='sm:flex ml-auto mr-auto'>
             <div>
                 <aside className="ml-20 4xl:ml-0 mt-10 border-2 border-pink-900 h-fit hidden sm:flex bg-black">
                     <div className="flex items-center  justify-center">
@@ -88,7 +87,20 @@ function RouteComponent() {
                 
                 <section className="grid gap-5 w-full p-6 pt-10  h-fit max-w-200">
                     <RandomLainPic/>                    
-                    <RandomLainPic/>   
+                    <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-170">
+                        <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
+                            momo
+                            <p className="ml-auto">X</p>
+                        </div>
+                        <div className='5xl:text-xl'>
+                            <Link to='/momo'>
+                            
+                            <img className='w-[700px]'
+                                src='/momo/momoclick.png'
+                            />
+                            </Link>
+                        </div>
+                    </div>  
                 </section>      
             </div>            
              
@@ -113,7 +125,7 @@ function RouteComponent() {
 
 
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-            one day you'll sit in the sun and things won't feel so bad.
+            ralilith 2025.
         </footer>
     </div>
   );

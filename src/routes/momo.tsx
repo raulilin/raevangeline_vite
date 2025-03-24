@@ -145,23 +145,8 @@ function RouteComponent() {
             width={900}
         />
 
-
-
-        {/* <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
-            style={{
-                    backgroundImage: "url(/heartbar3.gif)",
-                     height: "100%",
-                     minHeight: "100%",
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'repeat-x',
-                    //backgroundSize: 'auto',
-                    
-                    
-                }}             
-        >-</div>      */}
-
         <div className= {`w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15`}>
-            Thank you for existing, <em className='font-bold'>I love u</em>                                    
+            Thank you for existing, <em className='font-bold'>I love you</em>                                    
         </div>
         {/* <div className= {`w-full text-center font-semibold ${momoStyle.shadow_sub} p-8 pb-15`}>
         I appreciate you for exactly who you are

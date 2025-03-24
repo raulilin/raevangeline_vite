@@ -17,62 +17,134 @@ function RouteComponent() {
   }
     
   return (
-      <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
-      >
-          <Topbar/>
+    <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
+        style={{
+                backgroundImage: "url(/sky5.jpg)",
+                backgroundPosition: 'top',
+                backgroundRepeat: 'space repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'scroll'
+            }}             
+    >        
+        <Topbar/>
+        <div className= {`w-full text-center font-semibold p-8 pb-5`}>
+            me!(work in progress)
+            <div className='flex w-full'>
 
-          <main className="grid md:flex">                    
-              <section className="flex gap-5 w-full p-20 pt-10 flex-col">
-                  <div className="border-2 border-pink-900 items-center h-fit">
-                      <div className="flex border-b-2 border-pink-900 p-1 text-lg">
-                          me - WORK IN PROGRESS
-                           <p className="ml-auto">X</p>
-                      </div>
-                      <div className="rotate-180"> ∟</div>
-                      <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center ">
-                      <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-200">
-                        <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
-                            interests
-                            <p className="ml-auto">X</p>
-                        </div>
-                        <div className='5xl:text-xl'>
-                            <div className="flex items-center p-6 gap-8">
-                                <a href="https://www.backloggd.com/u/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Games </a>
-                                <p className="w-full text-center">MMOs, JRPGs, rhythm games, souls-likes, metroidvanias, VNs, Fighting games</p>
-                            </div>
-                            <div className="flex items-center p-6 gap-8 border-t">                            
-                                <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer" className="underline"> Music </a>
-                                <p className="w-full text-center">Grimes, Katie Jane Garside, Machinel Girl, Crystal Castles, Loathe, My Bloody Valentine, Femtanyl, Black Dresses, BMTH, Sewerslvt, Goreshit, Have a Nice Life, Ichiko Aoba, Blank Banshee, YABUJIN, Ecco2k...</p>
-                            </div>
-                            <div className="flex items-center p-6 gap-8 border-t">
-                                <a href="https://letterboxd.com/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Movies </a>
-                                <p className="w-full text-center">all about lily chou chou, oldboy, requiem for a dream, angel's egg, hereditary, midsommar, mulholland drive, rosemary's baby, taxi driver...</p>
-                            </div>
-                            <div className="flex items-center p-6 gap-8 border-t">
-                                <p>Anime</p> 
-                                <p className="w-full text-center">serial experiments lain</p>
-                            </div>
-                        </div>
+            </div>
+        </div>
+        <main className="grid md:flex">
+        <div className='sm:flex ml-auto mr-auto gap-x-40'>
+        {/* <div className='grid grid-cols-4 ml-20 4xl:ml-0'> */}
+            
+            <div className="grid border-2 border-blue-900 h-fit bg-black mr-5 sm:mr-0 max-w-[400px] 5xl:max-w-200 mb-50">
+                <div className="flex border-b-2 border-blue-900 p-1 text-lg 5xl:text-2xl">
+                    omg that"s me!!
+                    <p className="ml-auto">X</p>
+                </div>
+                <div className='5xl:text-xl'>
+                    <img src='ra/me3.png'
+                         className='max-w-[400px] 5xl:max-w-200'
+                    />
+                </div>
+
+                <div className="flex border-b-2 border-blue-900 p-1 text-lg 5xl:text-2xl">
+                    interests
+                </div>
+                <div className='5xl:text-xl'>
+                    <div className="flex items-center p-6 gap-8">
+                        <a href="https://www.backloggd.com/u/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Games </a>
+                        <p className="w-full text-center">MMOs, JRPGs, rhythm games, souls-likes, metroidvanias, VNs, Fighting games</p>
                     </div>
+                    <div className="flex items-center p-6 gap-8 border-t">                            
+                        <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer" className="underline"> Music </a>
+                        <p className="w-full text-center">Grimes, Katie Jane Garside, Machinel Girl, Crystal Castles, Loathe, My Bloody Valentine, Femtanyl, Black Dresses, BMTH, Sewerslvt, Goreshit, Have a Nice Life, Ichiko Aoba, Blank Banshee, YABUJIN, Ecco2k...</p>
+                    </div>
+                    <div className="flex items-center p-6 gap-8 border-t">
+                        <a href="https://letterboxd.com/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Movies </a>
+                        <p className="w-full text-center">all about lily chou chou, oldboy, requiem for a dream, angel's egg, hereditary, midsommar, mulholland drive, rosemary's baby, taxi driver...</p>
+                    </div>
+                    <div className="flex items-center p-6 gap-8 border-t">
+                        <p>Anime</p> 
+                        <p className="w-full text-center">serial experiments lain</p>
+                    </div>
+                </div>                
+            </div>        
 
-                          <button onClick={start} className="underline">                            
-                              WIP                            
-                              <img src={'/nekowip.gif'}
-                                  width={400}
-                                  height={400}
-                                  alt=""
-                              />
-                          </button>                            
-                      </span>                
-                      <div> ∟</div>                    
-                  </div>
-              </section>     
-          </main>
+            <div className="border-2 border-blue-900 items-center h-fit bg-black mr-5 sm:mr-0 5xl:max-w-200">
+                <div className="flex border-b-2 border-blue-900 p-1 text-lg 5xl:text-2xl">
+                who am i
+                    <p className="ml-auto">X</p>
+                </div>
+                <div className="rotate-180"> ∟</div>
+                <span className="flex flex-col p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl">
+                    <p> {'>'} i'm ra (ralilith, evangeline in some places or games),   </p>                            
+                </span>                
+                <div> ∟</div>                    
+            </div>
+        
+        {/* </div> */}
+        </div>
+        </main>
+    </div>
 
 
-          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-              one day you'll sit in the sun and things won't feel so bad.
-          </footer>
-      </div>
+    //   <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
+    //   >
+    //       <Topbar/>
+
+    //       <main className="grid md:flex">                    
+    //           <section className="flex gap-5 w-full p-20 pt-10 flex-col">
+    //               <div className="border-2 border-pink-900 items-center h-fit">
+    //                   <div className="flex border-b-2 border-pink-900 p-1 text-lg">
+    //                       me - WORK IN PROGRESS
+    //                        <p className="ml-auto">X</p>
+    //                   </div>
+    //                   <div className="rotate-180"> ∟</div>
+    //                   <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center ">
+    //                   <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-200">
+    //                     <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
+    //                         interests
+    //                         <p className="ml-auto">X</p>
+    //                     </div>
+    //                     <div className='5xl:text-xl'>
+    //                         <div className="flex items-center p-6 gap-8">
+    //                             <a href="https://www.backloggd.com/u/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Games </a>
+    //                             <p className="w-full text-center">MMOs, JRPGs, rhythm games, souls-likes, metroidvanias, VNs, Fighting games</p>
+    //                         </div>
+    //                         <div className="flex items-center p-6 gap-8 border-t">                            
+    //                             <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer" className="underline"> Music </a>
+    //                             <p className="w-full text-center">Grimes, Katie Jane Garside, Machinel Girl, Crystal Castles, Loathe, My Bloody Valentine, Femtanyl, Black Dresses, BMTH, Sewerslvt, Goreshit, Have a Nice Life, Ichiko Aoba, Blank Banshee, YABUJIN, Ecco2k...</p>
+    //                         </div>
+    //                         <div className="flex items-center p-6 gap-8 border-t">
+    //                             <a href="https://letterboxd.com/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Movies </a>
+    //                             <p className="w-full text-center">all about lily chou chou, oldboy, requiem for a dream, angel's egg, hereditary, midsommar, mulholland drive, rosemary's baby, taxi driver...</p>
+    //                         </div>
+    //                         <div className="flex items-center p-6 gap-8 border-t">
+    //                             <p>Anime</p> 
+    //                             <p className="w-full text-center">serial experiments lain</p>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+
+    //                       <button onClick={start} className="underline">                            
+    //                           WIP                            
+    //                           <img src={'/nekowip.gif'}
+    //                               width={400}
+    //                               height={400}
+    //                               alt=""
+    //                           />
+    //                       </button>                            
+    //                   </span>                
+    //                   <div> ∟</div>                    
+    //               </div>
+    //           </section>     
+    //       </main>
+
+
+    //       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+    //           one day you'll sit in the sun and things won't feel so bad.
+    //       </footer>
+    //   </div>
   );
 }
