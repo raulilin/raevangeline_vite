@@ -1,0 +1,28 @@
+.shadow {
+    text-shadow:
+      1px 1px 10px black,
+      0 0 1em black,
+      0 0 0.2em black;
+    color: white;
+    font:
+      2.5em Georgia,
+      serif;
+}
+
+.shadow_sub {
+    text-shadow:
+      1px 1px 10px black,
+      0 0 1em black,
+      0 0 0.2em black;
+    color: white;
+    font:
+      1.5em Georgia,
+
+      serif;
+}
+
+.customstyle {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #d7bc86 0%, #fcf1db 74%);
+    color: aliceblue;   
+}

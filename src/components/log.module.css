@@ -1,0 +1,9 @@
+.terminal {
+    height: 200px; /* altura fixa, ajuste conforme necessário */
+    overflow-y: auto; /* rolar somente dentro dessa área */
+    background-color: black; /* ou qualquer outra cor de fundo */
+    padding: 10px; /* margem interna */
+    border-radius: 5px; /* borda opcional */
+    font-family: monospace; /* estilo de fonte */
+  }
+  

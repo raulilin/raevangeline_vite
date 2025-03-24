@@ -1,0 +1,78 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { Topbar } from '../components/top';
+import fadeStyle from './Fade.module.css'
+import { useRef } from 'react';
+
+export const Route = createFileRoute('/me')({
+  component: RouteComponent,
+})
+
+function RouteComponent() {
+  const audio = useRef<HTMLAudioElement | undefined>(
+      typeof Audio !== "undefined" ? new Audio("/necoarc.mp3") : undefined
+    );    
+
+  const start = () => {
+      audio.current?.play(); 
+  }
+    
+  return (
+      <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
+      >
+          <Topbar/>
+
+          <main className="grid md:flex">                    
+              <section className="flex gap-5 w-full p-20 pt-10 flex-col">
+                  <div className="border-2 border-pink-900 items-center h-fit">
+                      <div className="flex border-b-2 border-pink-900 p-1 text-lg">
+                          me - WORK IN PROGRESS
+                           <p className="ml-auto">X</p>
+                      </div>
+                      <div className="rotate-180"> ∟</div>
+                      <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center ">
+                      <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-200">
+                        <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
+                            interests
+                            <p className="ml-auto">X</p>
+                        </div>
+                        <div className='5xl:text-xl'>
+                            <div className="flex items-center p-6 gap-8">
+                                <a href="https://www.backloggd.com/u/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Games </a>
+                                <p className="w-full text-center">MMOs, JRPGs, rhythm games, souls-likes, metroidvanias, VNs, Fighting games</p>
+                            </div>
+                            <div className="flex items-center p-6 gap-8 border-t">                            
+                                <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer" className="underline"> Music </a>
+                                <p className="w-full text-center">Grimes, Katie Jane Garside, Machinel Girl, Crystal Castles, Loathe, My Bloody Valentine, Femtanyl, Black Dresses, BMTH, Sewerslvt, Goreshit, Have a Nice Life, Ichiko Aoba, Blank Banshee, YABUJIN, Ecco2k...</p>
+                            </div>
+                            <div className="flex items-center p-6 gap-8 border-t">
+                                <a href="https://letterboxd.com/ralilith/" target="_blank" rel="noopener noreferrer" className="underline"> Movies </a>
+                                <p className="w-full text-center">all about lily chou chou, oldboy, requiem for a dream, angel's egg, hereditary, midsommar, mulholland drive, rosemary's baby, taxi driver...</p>
+                            </div>
+                            <div className="flex items-center p-6 gap-8 border-t">
+                                <p>Anime</p> 
+                                <p className="w-full text-center">serial experiments lain</p>
+                            </div>
+                        </div>
+                    </div>
+
+                          <button onClick={start} className="underline">                            
+                              WIP                            
+                              <img src={'/nekowip.gif'}
+                                  width={400}
+                                  height={400}
+                                  alt=""
+                              />
+                          </button>                            
+                      </span>                
+                      <div> ∟</div>                    
+                  </div>
+              </section>     
+          </main>
+
+
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+              one day you'll sit in the sun and things won't feel so bad.
+          </footer>
+      </div>
+  );
+}

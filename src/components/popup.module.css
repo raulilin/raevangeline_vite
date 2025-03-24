@@ -1,0 +1,66 @@
+.img {
+  position: absolute;
+
+  /* transform: translate(-50%, -50%); */
+}
+.imgMobile {
+  position: absolute;
+
+  /* transform: translate(-40%, -60%); */
+}
+
+.div {
+    position: sticky;
+    top: 94%;
+    left: 100%;
+    cursor: pointer;
+}
+.balloonbox {
+  /* width: 281px; */
+  /* height: 53px; */
+  background: #f1f1f1;
+  border-radius: 26.5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* transform: translate(-40%, -200%); */
+}
+
+.balloonbox::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  background: #f1f1f1;
+  position: absolute;
+  bottom: -7px;
+  right: 30px;    
+}
+.balloonbox::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #f1f1f1;
+  position: absolute;
+  right: 15px;
+  bottom: -21px;
+}
+.balloonbox {
+  filter: drop-shadow(0 0 3px rgba(0,0,0,.5));
+}
+.circ {
+  width: 281px;
+  height: 53px;
+  background: #f1f1f1;
+  border-radius: 26.5px;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+}
