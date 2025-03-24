@@ -60,7 +60,7 @@ export default function PopUp() {
   return (
             <>
                 {popup} 
-                <button onClick={showPopupHandler}>Show Pop-up</button>
+                {/* <button onClick={showPopupHandler}>Show Pop-up</button> */}
             </>
   );
 }
