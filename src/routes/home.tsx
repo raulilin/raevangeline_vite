@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { getRandomIntCryp } from '../utils/utils';
+import { getRandomIntCryp, openInNewTab } from '../utils/utils';
 import fadeStyle from './Fade.module.css'
 import { Topbar } from '../components/top';
 import { NekoButton } from '../components/nekobutton';
@@ -125,7 +125,7 @@ function RouteComponent() {
 
 
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-            ralilith 2025.
+             <a onClick={() => openInNewTab("https://github.com/raulilin/raevangeline_vite") } style={{ cursor: 'pointer' }}>ralilith 2025.</a>
         </footer>
     </div>
   );
