@@ -41,7 +41,7 @@ function RouteComponent() {
                 backgroundAttachment: 'scroll'
             }}
     >
-        <Topbar/>
+        <Topbar borderColor='warm-orange'/>
 
         <div className= {`w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15 `}>
             I dedicate this page to my beloved doll, <em className='font-bold 5xl:text-5xl'>Julia </em>

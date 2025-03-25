@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Topbar } from '../components/top';
 import fadeStyle from './Fade.module.css'
 import { useRef } from 'react';
+import { preload } from 'react-dom';
 
 export const Route = createFileRoute('/me')({
   component: RouteComponent,
@@ -15,18 +16,18 @@ function RouteComponent() {
   const start = () => {
       audio.current?.play(); 
   }
-    
+        
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/sky5.jpg)",
+                backgroundImage: "url(/sky5.webp)",
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'scroll'
             }}             
     >        
-        <Topbar/>
+        <Topbar borderColor='blue'/>
         <div className= {`w-full text-center font-semibold p-8 pb-5`}>
             me!(work in progress)
             <div className='flex w-full'>

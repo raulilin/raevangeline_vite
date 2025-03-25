@@ -3,13 +3,25 @@ import styles from './Glitch.module.css'
 // import { SongButton } from "./songbutton";
 import { Link } from "@tanstack/react-router";
 import { SongButton } from "./songbutton.tsx";
+import { cn } from "../utils/utils.ts";
 
-export function Topbar() {
+interface Props  {
+    borderColor:string
+};
+export function Topbar(props:Props) {
+    const BorderColor = [
+        {"name":"pink", "class":"border-pink-900"},
+        {"name":"blue", "class":"border-blue-900"},
+        {"name":"warm-orange", "class":"border-warm-orange"},
+        {"name":"slate", "class":"border-slate-900"},
+      ]
 
-    return (
+    return (        
         <header className="p-8 pb-0">
-
-        <div className="border-2 border-pink-900 p-4 font-extrabold">
+        <div className={cn("border-2 p-4 font-extrabold ",
+                            BorderColor.find(record => record.name === props.borderColor)?.class
+                        )}
+        >
             <div className="flex sm:flex text-2xl sm:text-5xl 5xl:text-7xl">
                 <span className="">
                     <p data-text="Eva's(ra) domain">
@@ -26,7 +38,10 @@ export function Topbar() {
             </div>
         </div>
 
-        <div className="hidden md:flex border-2 border-t-0 border-pink-900 5xl:text-xl p-1 gap-1 underline ">
+        <div className={cn("hidden md:flex border-2 border-t-0 5xl:text-xl p-1 gap-1 underline",
+                           BorderColor.find(record => record.name === props.borderColor)?.class
+                        )}
+        >
             <Link to={"/me"} className="flex"> 
                 <img src={'/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
                         
@@ -79,12 +94,15 @@ export function Topbar() {
             </Link> 
         </div>
 
-        <div className="border-2 border-t-0 border-pink-900 text-4xl font-bold p-1">
-        <VelocityScroll
-            text="Favriel | In the Arms of Flowers | Subterranean Values | XMAS_EVET10 [120][thanaton3 mix] | What isn't remembered never happened. | Make me sad. Make me mad. Make me feel alright?  Make me feel alright? |"
-            default_velocity={1}
-            className="text-center md:leading-[5rem]"
-        />             
+        <div className={cn("border-2 border-t-0 text-4xl font-bold p-1",
+                        BorderColor.find(record => record.name === props.borderColor)?.class
+                        )}
+        >
+            <VelocityScroll
+                text="Favriel | In the Arms of Flowers | Subterranean Values | XMAS_EVET10 [120][thanaton3 mix] | What isn't remembered never happened. | Make me sad. Make me mad. Make me feel alright?  Make me feel alright? |"
+                default_velocity={1}
+                className="text-center md:leading-[5rem]"
+            />             
         </div>      
     </header>
     )

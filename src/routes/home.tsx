@@ -14,11 +14,12 @@ export const Route = createFileRoute('/home')({
 
 function RouteComponent() {
     preload('flowerwarm.webp', { as: 'image' }) // preloads this stylesheet
+    preload('ra/me3.png', { as: 'image' }) // preloads this stylesheet
     let sideImg = getRandomIntCryp(0,7) + 1
 
     return (
     <div className={`w-full h-full flex-grow text-white font-teste bg-black ${fadeStyle.fade} 5xl:h-screen`}>     
-        <Topbar/>
+        <Topbar borderColor='pink'/>
 
         <main className="grid md:flex">
         <div className='sm:flex ml-auto mr-auto'>
