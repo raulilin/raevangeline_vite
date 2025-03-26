@@ -47,21 +47,21 @@ function RouteComponent() {
           <Topbar borderColor='white'/>
 
           <main className="grid sm:grid-cols-3">
-              <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white h-fit">
-                  <div className="border-2 border-white-900 h-full items-center h-fit">
+              <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white h-fit max-w-[700px]">
+                  {/* <div className="border-2 border-white-900 h-full items-center h-fit">
                         <Poem></Poem>
                         <Poem></Poem>
                         <Poem></Poem>
-                  </div>
+                  </div> */}
                   <div className="border-2 border-white h-full h-fit">
 
-                      {/* <div className="flex border-b-2 border-white p-1 text-lg">
+                      <div className="flex border-b-2 border-white p-1 text-lg">
                           :)
                           <p className="ml-auto">X</p>
                       </div>
                       <div className="flex items-center p-6 justify-center">
                             <ExemploForm/>
-                      </div>             */}
+                      </div>            
                   </div>
 
                  

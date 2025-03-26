@@ -28,7 +28,7 @@ export default function ExemploForm () {
     })
 
   return (
-    <div>
+    <div className="w-full">
       <h1></h1>
       <form
         onSubmit={(e) => {
@@ -37,8 +37,47 @@ export default function ExemploForm () {
           form.handleSubmit()
         }}
       >
-        <div className="flex">
-          {/* A type-safe field component*/}
+        <div>
+          <form.Field
+            name="handle"
+            validators={{
+              onChange: ({ value }) =>
+                !value
+                  ? 'a handle is required'
+                    : undefined,
+              // onChangeAsyncDebounceMs: 500,
+              // onChangeAsync: async ({ value }) => {
+              //   await new Promise((resolve) => setTimeout(resolve, 1000))
+              //   return (
+              //     value.includes('error') && 'No "error" allowed in first name'
+              //   )
+              // },
+            }}
+        
+            children={(field) => {
+              return (
+                <section className="grid">
+                  <div className="flex">
+                    <label htmlFor={field.name}>handle: </label>
+                    <div className="ml-auto mr-auto">
+                      <FieldInfo field={field} />
+                    </div>
+                  </div>
+                  <input
+                    id={field.name}
+                    name={field.name}
+                    value={field.state.value}
+                    onBlur={field.handleBlur}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                    className="border-2 w-full max-w-[250px]"
+                  />
+                  
+                </section>
+              )
+            }}
+          />
+        </div>        
+        <div>
           <form.Field
             name="title"
             validators={{
@@ -51,7 +90,6 @@ export default function ExemploForm () {
               },
             }}
             children={(field) => {
-              // Avoid hasty abstractions. Render props are great!
               return (
                 <>
                   <label htmlFor={field.name}>title: </label>
@@ -61,65 +99,28 @@ export default function ExemploForm () {
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
-                    className="border-2 ml-auto"
+                    className="border-2 ml-auto w-[340px]"
                   />
-                  <FieldInfo field={field} />
+                   <FieldInfo field={field} /> 
                 </>
               )
             }}
           />
         </div>        
-        <div className="flex">
-          {/* A type-safe field component*/}
-          <form.Field
-            name="handle"
-            validators={{
-              onChange: ({ value }) =>
-                !value
-                  ? 'A first name is required'
-                  : value.length < 3
-                    ? 'First name must be at least 3 characters'
-                    : undefined,
-              onChangeAsyncDebounceMs: 500,
-              onChangeAsync: async ({ value }) => {
-                await new Promise((resolve) => setTimeout(resolve, 1000))
-                return (
-                  value.includes('error') && 'No "error" allowed in first name'
-                )
-              },
-            }}
-            children={(field) => {
-              // Avoid hasty abstractions. Render props are great!
-              return (
-                <>
-                  <label htmlFor={field.name}>handle: </label>
-                  <input
-                    id={field.name}
-                    name={field.name}
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                    className="border-2 ml-auto"
-                  />
-                  <FieldInfo field={field} />
-                </>
-              )
-            }}
-          />
-        </div>
+{/*
         <div className="flex">
           <form.Field
             name="message"
             children={(field) => (
               <>
                 <label htmlFor={field.name}>message:</label>
-                <input
+                <textarea
                   id={field.name}
                   name={field.name}
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
-                  className="border-2"
+                  className="border-2 h-[200px] w-[340px]"
                 />
                 <FieldInfo field={field} />
               </>
@@ -136,7 +137,7 @@ export default function ExemploForm () {
               </button>
             </>
           )}
-        />
+        /> */}
       </form>
     </div>
   )
