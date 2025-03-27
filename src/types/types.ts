@@ -1,7 +1,10 @@
 export type thoughts = {
+    handle : string
+    title : string
     text : string
     id: number
     date : string
+    ra : boolean
 };
 
 export type songs = {

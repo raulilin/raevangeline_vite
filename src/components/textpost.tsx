@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { thoughts } from '../types/types'
 import { getThoughts } from '../api/api'
 import supabase from '../utils/supabase'
+import { cn } from '../utils/utils'
 
 export default function ClientPosts() {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,14 +29,37 @@ export default function ClientPosts() {
   
   return (
     isLoading ? <p>Loading</p> : 
-    <div className='text-white'>
+    <div className='text-white space-y-2'>
         {posts2?.map (data => 
-          <pre key={data.id} className='border-b'>
-          --{data.date}
-          <pre key={data.id} className=''>
-              {data.text}
+          <pre key={data.id} className='border-b p-3 shadow-xl backdrop-blur-xs hover:backdrop-blur-sm '>
+          {/* <div className='flex'>{'>'} {data.handle} : <b className='ml-auto'>{data.date}</b> </div> */}
+          
+          <div className='flex underline decoration-1'>{'handle:'} 
+            {data.handle ?  
+              (<pre className={cn('underline',
+                               data.ra ? 'text-purple-800': ''
+                              )}
+              > 
+                {data.handle}
+              </pre>)
+            : 
+              (<> Anon</>)
+            }
+            <b className='ml-auto'>date: {data.date}</b> 
+          </div>
+
+            {data.title ?  
+              <pre key={data.id} className='pl-1'>
+                title: {data.title}
+              </pre>
+            : 
+              ('')
+            }
+
+            <pre key={data.id} className='text-wrap break-all'>
+                {data.text}
+            </pre>
           </pre>
-      </pre>
         )}
     </div>
   )

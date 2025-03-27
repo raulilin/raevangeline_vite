@@ -17,7 +17,7 @@ function RouteComponent() {
   
   function randomLain() : string {       
       //const idTest = getRandomInt(0,7) + 1
-      const lainpic = "/randompics/"+idTest+".png"
+      const lainpic = "/randompics/"+(getRandomIntCryp(0,18) + 1)+".png"
 
       const lainpics = [
           { id: 1, value: "/lain/catpics/lain1.png" },
@@ -46,16 +46,16 @@ function RouteComponent() {
     >
           <Topbar borderColor='white'/>
 
-          <main className="grid sm:grid-cols-3">
-              <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white h-fit max-w-[700px]">
+          <main className="grid grid-cols-1 sm:grid-cols-3">
+              <section className="flex gap-5 w-full pl-5 sm:pl-20 pr-5 pt-10 flex-col text-white h-fit max-w-[700px]">
                   {/* <div className="border-2 border-white-900 h-full items-center h-fit">
                         <Poem></Poem>
                         <Poem></Poem>
                         <Poem></Poem>
                   </div> */}
-                  <div className="border-2 border-white h-full h-fit">
+                  <div className="border-2 border-white h-full h-fit shadow-xl backdrop-blur-xs">
 
-                      <div className="flex border-b-2 border-white p-1 text-lg">
+                      <div className="flex border-b-2 border-white p-1 text-lg ">
                           :)
                           <p className="ml-auto">X</p>
                       </div>
@@ -64,11 +64,23 @@ function RouteComponent() {
                       </div>            
                   </div>
 
-                 
-
-                  <div className="border-2 border-white h-full h-fit">
+                  <div className="hidden sm:grid border-2 border-white h-full h-fit">
                       <div className="flex border-b-2 border-white p-1 text-lg">
-                          random pic no#{idTest + 1}
+                          random pic 
+                          <p className="ml-auto">X</p>
+                      </div>
+                      <div className="flex items-center p-6 justify-center">
+                          <img src={randomLain()}
+                              width={450}
+                              height={450}
+                              alt=""
+                          />
+                      </div>            
+                  </div> 
+                  
+                  <div className="hidden sm:grid border-2 border-white h-full h-fit">
+                      <div className="flex border-b-2 border-white p-1 text-lg">
+                          random pic
                           <p className="ml-auto">X</p>
                       </div>
                       <div className="flex items-center p-6 justify-center">
@@ -81,9 +93,9 @@ function RouteComponent() {
                   </div> 
               </section> 
 
-              <section className="flex gap-5 w-full p-20 pl-5 pt-10 flex-col col-span-2">
+              <section className="flex gap-5 w-full p-20 pl-5 pr-5 sm:pl-5 sm:pr-20 pt-10 flex-col col-span-2">
                   <div className="border-2 border-white-900 items-center h-fit">
-                      <div className="flex border-b-2 border-white-900 p-1 text-lg text-white">
+                      <div className="flex border-b-2 border-white-900 p-1 text-lg text-white ">
                            thoughts... 
                            <p className="ml-auto">X</p>
                       </div>

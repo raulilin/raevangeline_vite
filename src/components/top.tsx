@@ -67,7 +67,9 @@ export function Topbar(props:Props) {
                 thoughts 
             </Link>            
         </div>
-        <div className="flex md:hidden border-2 border-t-0 border-pink-900 text-1xl p-1 justify-left">
+        <div className={cn("flex md:hidden border-2 border-t-0 text-1xl p-1 justify-left",
+                           BorderColor.find(record => record.name === props.borderColor)?.class
+                        )}>
         <Link to={"/me"} className="flex"> 
                 <img src={'/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
                         
