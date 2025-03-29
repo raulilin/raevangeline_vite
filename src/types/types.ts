@@ -5,6 +5,7 @@ export type thoughts = {
     id: number
     date : string
     ra : boolean
+    momo : boolean
 };
 
 export type songs = {

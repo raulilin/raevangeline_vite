@@ -37,7 +37,8 @@ export default function ClientPosts() {
           <div className='flex underline decoration-1'>{'handle:'} 
             {data.handle ?  
               (<pre className={cn('underline',
-                               data.ra ? 'text-purple-800': ''
+                               data.ra ? 'text-purple-800': '',
+                               data.momo ? 'text-pink-600': ''
                               )}
               > 
                 {data.handle}
