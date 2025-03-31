@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
@@ -14,6 +15,8 @@ body {
   --breakpoint-5xl: 240rem;
   
   --color-warm-orange: #e7b05d; 
+
+  --font-overpass: "Overpass", sans-serif; 
 
   --animate-fade-in: fade-in 1s;
   @keyframes fade-in {

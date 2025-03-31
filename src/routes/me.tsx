@@ -66,7 +66,7 @@ function RouteComponent() {
                         <p className="w-full text-center">all about lily chou chou, oldboy, requiem for a dream, angel's egg, hereditary, midsommar, mulholland drive, rosemary's baby, taxi driver...</p>
                     </div>
                     <div className="flex items-center p-6 gap-8 border-t">
-                        <p>Anime</p> 
+                    <a href="https://myanimelist.net/profile/ralilith" target="_blank" rel="noopener noreferrer" className="underline"> Anime </a>
                         <p className="w-full text-center">serial experiments lain</p>
                     </div>
                 </div>                

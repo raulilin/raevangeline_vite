@@ -28,9 +28,12 @@ export default function ClientPosts() {
   .subscribe()
   
   function ehMomo(pNome: string){
-    if (pNome = "cleo campbell") return true 
-    else 
-    return false
+    let retorno = false;
+    if (pNome = "cleo campbell") retorno = true
+    console.log(pNome)
+    console.log(retorno)
+
+    return retorno
   }
 
   return (
@@ -44,10 +47,11 @@ export default function ClientPosts() {
             {data.handle ?  
               (<pre className={cn('underline',
                                data.ra ? 'text-purple-800': '',
-                               data.momo ? 'text-pink-600': '',                               
+                               data.momo ? 'text-pink-600': '',                                                              
                               )}
               > 
               {/* ehMomo(data.handle) ? 'text-pink-600': '' */}
+              
                 {data.handle}
               </pre>)
             : 

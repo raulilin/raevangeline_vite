@@ -5,7 +5,7 @@ import PopUp from '../components/popup'
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className='bg-black'>
+      <div className='bg-black font-overpass'>
         
         <hr />
         <PopUp />
