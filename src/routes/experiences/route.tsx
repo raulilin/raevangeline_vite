@@ -1,15 +1,22 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { openInNewTab } from '../../utils/utils'
+import { cn, openInNewTab } from '../../utils/utils'
 import { Topbar } from '../../components/top'
 import fadeStyle from '../Fade.module.css'
+import { useEffect, useState } from 'react'
 
 export const Route = createFileRoute('/experiences')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
+    const [selected, setSelected] = useState(0);
+
+    function onClickItem(pItem:number){
+        setSelected(pItem)
+    }
+
   return (
-    <div className={`w-full h-full flex-grow text-white font-teste bg-slate-700 ${fadeStyle.fade} 5xl:h-screen h-screen`}>     
+    <div className={`w-full h-full flex-grow text-white font-teste bg-slate-700 ${fadeStyle.fade} 5xl:h-screen`}>     
         <Topbar borderColor='pink'/>
 
         <main className="flex flex-row justify-center pt-5 gap-5">
@@ -20,10 +27,22 @@ function RouteComponent() {
                 </div>
                 <div className="rotate-180"> ∟</div>
                 <span className="flex flex-col p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl">
-                    <p className='text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black'> {'>'} 1 - Down the rabbit hole</p>
-                    <p className='text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black'> {'>'} ??? </p>
-                    <p className='text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black'> {'>'} ??? </p>
-                </span>                
+                    <p onClick={() => onClickItem(1)}
+                       className={cn('text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black ',
+                                    (selected==1) ? 'border-4' : ''
+                                   )}> 
+                        {'>'} 1 - Down the rabbit hole
+                    </p>
+                    <p onClick={() => onClickItem(2)}
+                       className={cn('text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black',
+                                    (selected==2) ? 'border-4' : ''
+                                   )}> 
+                        {'>'} ??? 
+                    </p>
+                    <p className='text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black'> 
+                        {'>'} ??? 
+                    </p>
+                </span>
                 <div> ∟</div>                    
             </div>   
 
@@ -33,8 +52,8 @@ function RouteComponent() {
                     <p className="ml-auto">X</p>
                 </div>
                 <div className="rotate-180"> ∟</div>
-                <span className="flex flex-col p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl">
-                    <p>   </p>                            
+                <span className="flex flex-col p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl items-center">
+                    <img src='crt.jpg' className='max-w-[1000px] '/>
                 </span>                
                 <div> ∟</div>                    
             </div>   
