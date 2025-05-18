@@ -54,7 +54,9 @@ function RouteComponent() {
 
                     <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-200">
                         <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
-                            me
+                            <Link to='/me' className='hover:underline'>
+                                about me (click!)
+                            </Link>
                             <p className="ml-auto">X</p>
                         </div>
                         <div className='5xl:text-xl'>
@@ -69,7 +71,7 @@ function RouteComponent() {
 
                     <div className="border-2 border-pink-900 items-center h-fit bg-black mr-5 sm:mr-0 max-w-100">
                         <div className="flex border-b-2 border-pink-900 p-1 text-lg">
-                            <a href="https://open.spotify.com/user/sjqqt4d7ebxsfjbs0rc827zh5?si=e79e7754e1754a83" className="underline">random playlists (click 4 spotify prof.)</a>
+                            <a href="https://open.spotify.com/user/sjqqt4d7ebxsfjbs0rc827zh5?si=e79e7754e1754a83" className="hover:underline">random playlists</a>
                             <p className="ml-auto">X</p>
                         </div>
                         <div className="rotate-180"> ∟</div>

@@ -43,7 +43,7 @@ export default function ClientPosts() {
           <pre key={data.id} className='border-b p-3 shadow-xl backdrop-blur-xs hover:backdrop-blur-sm '>
           {/* <div className='flex'>{'>'} {data.handle} : <b className='ml-auto'>{data.date}</b> </div> */}
           
-          <div className='grid grid-cols-2 sm:flex underline decoration-1'>{'handle:'} 
+          <div className='grid grid-cols-2 sm:flex underline decoration-1'> 
             {data.handle ?  
               (<pre className={cn('underline',
                                data.ra ? 'text-purple-800': '',
@@ -55,7 +55,7 @@ export default function ClientPosts() {
                 {data.handle}
               </pre>)
             : 
-              (<> Anon</>)
+              (<>Anon</>)
             }
             <b className='ml-auto'>date: {data.date}</b> 
           </div>

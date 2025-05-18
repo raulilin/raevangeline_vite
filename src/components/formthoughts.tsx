@@ -73,7 +73,7 @@ export default function ExemploForm () {
               return (
                 <section className="grid ">
                   <div className="flex">
-                    <label htmlFor={field.name}>handle:</label>
+                    <label htmlFor={field.name}>handle: (optional)</label>
                     <div className="ml-auto mr-auto">
                       <FieldInfo field={field} />
                     </div>

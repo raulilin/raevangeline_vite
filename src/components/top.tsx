@@ -28,7 +28,9 @@ export function Topbar(props:Props) {
                         <span>risoro - WIP</span>
                     </p>
                     <Link to={"/home"}>
-                        <p className= {`text-sm sm:text-[23px] 5xl:text-4xl underline ${styles.glitch} ${styles.layers}`} data-text="Eva's(ra) domain"><span>ra's safe haven</span></p>
+                        <p className= {`text-sm sm:text-[23px] 5xl:text-4xl hover:underline ${styles.glitch} ${styles.layers}`} data-text="Eva's(ra) domain">
+                            <span>ra's safe haven</span>
+                        </p>
                     </Link>
                 </span>
                 <span className="flex ml-auto text-[9px] sm:text-sm 5xl:text-xl items-center gap-3">
@@ -38,11 +40,11 @@ export function Topbar(props:Props) {
             </div>
         </div>
 
-        <div className={cn("hidden md:flex border-2 border-t-0 5xl:text-xl p-1 gap-1 underline",
+        <div className={cn("hidden md:flex border-2 border-t-0 5xl:text-xl p-1 gap-1",
                            BorderColor.find(record => record.name === props.borderColor)?.class
                         )}
         >
-            <Link to={"/me"} className="flex"> 
+            <Link to={"/me"} className="flex hover:underline"> 
                 <img src={'/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
                         
                         height={5}
@@ -51,7 +53,7 @@ export function Topbar(props:Props) {
                 me
             </Link>            
             | 
-            <Link to={"/momo"} className="flex"> 
+            <Link to={"/momo"} className="flex hover:underline"> 
                 <img src={'/heart1.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
@@ -59,7 +61,7 @@ export function Topbar(props:Props) {
                 momo 
             </Link>            
             | 
-            <Link to={"/thoughts"} className="flex"> 
+            <Link to={"/thoughts"} className="flex hover:underline"> 
                 <img src={'/mailwrite.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
@@ -67,12 +69,12 @@ export function Topbar(props:Props) {
                 thoughts 
             </Link>            
             | 
-            <Link to={"/experiences"} className="flex"> 
-                <img src={'/moon.gif'}  className="w-[24px] 5xl:w-[34px]"
+            <Link to={"/experiences"} className="flex hover:underline"> 
+                <img src={'/moon.gif'}  className="w-[24px] 5xl:w-[34px] mr-2"
                         height={5}
                         alt=""
                 />
-                experiences 
+                experiences (wip)
             </Link>                  
         </div>
         <div className={cn("flex md:hidden border-2 border-t-0 text-1xl p-1 justify-left",
