@@ -36,6 +36,11 @@ export default function ClientPosts() {
     return retorno
   }
 
+  function localizarData(data:string){
+    const retorno = new Date(data);
+    return retorno.toLocaleString();
+  }
+
   return (
     isLoading ? <p>Loading</p> : 
     <div className='text-white space-y-2'>
@@ -57,7 +62,7 @@ export default function ClientPosts() {
             : 
               (<>Anon</>)
             }
-            <b className='ml-auto'>date: {data.date}</b> 
+            <b className='ml-auto'>date: {localizarData( data.date )}</b> 
           </div>
 
             {data.title ?  
