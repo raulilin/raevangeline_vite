@@ -17,7 +17,7 @@ export function SongButton() {
 
     return (
         <button onClick={() => openInNewTab(randomSong()) } style={{ cursor: 'pointer' }}>
-            <img src={'/eye.gif'}
+            <img src={'/images/navbar/eye.gif'}
                     width={75}
                     height={0}
                     alt=""

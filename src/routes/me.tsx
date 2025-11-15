@@ -20,7 +20,7 @@ function RouteComponent() {
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/sky5.webp)",
+                backgroundImage: "url(/images/bgs/sky5.webp)",
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',
@@ -44,7 +44,7 @@ function RouteComponent() {
                     <p className="ml-auto">X</p>
                 </div>
                 <div className='5xl:text-xl'>
-                    <img src='ra/me3.png'
+                    <img src='images/ra/me3.png'
                          className='max-w-[397px] 5xl:max-w-200'
                     />
                 </div>
@@ -83,13 +83,13 @@ function RouteComponent() {
                             <p className='max-w-[500px]'> {'>'} my name is ra (ralilith, evangeline in some places or games), and i'm a 23 y/o frontend developer from Brazil!!</p>
                             <p className='max-w-[500px]'> {'>'} i looove web 1.0 aesthetics and this website pays homage to that era</p>
                             <img className='max-w-[100px] pb-4 ml-auto mr-auto'
-                                src = "moon2.gif"
+                                src = "images/moon2.gif"
                             />
                             <p className='max-w-[500px]'> {'>'} i love jrpgs, yume nikki, rhythm games, souls-likes</p>
                             <p className='max-w-[500px]'> {'>'} currently learning gamedev with godot</p>
                             <p className='max-w-[500px]'> {'>'} feel free to reach me in any of my socials (─‿‿─)</p>
                             <img className='max-w-[100px]  ml-auto mr-auto'
-                                src = "btana_moon.gif"
+                                src = "images/btana_moon.gif"
                             />                        
                         </span>                
                     <div> ∟</div>                                    
@@ -103,11 +103,11 @@ function RouteComponent() {
                     <div className="rotate-180"> ∟</div>
                         <span className="flex p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl">
                             <img className='max-w-[100px] pb-4'
-                                src = "lainnav.gif"
+                                src = "/images/lainnav.gif"
                             />
                             <textarea
                                 className="border-2 w-full text-[11px]"
-                                value={'<a href="https://raevangeline.art/" target="_blank"><img src="https://raevangeline.art/lainnav.gif" alt="raevangeline"/></a>'}
+                                value={'<a href="https://raevangeline.art/" target="_blank"><img src="https://raevangeline.art/images/lainnav.gif" alt="raevangeline"/></a>'}
                                  style={{ resize: 'none' }}
                                 />                                    
                         </span>                
@@ -123,7 +123,7 @@ function RouteComponent() {
                 <div className="rotate-180"> ∟</div>
                     <span className="flex flex-col p-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl text-left">
                         <img className='max-w-[100px] pb-4'
-                            src = "lainnav.gif"
+                            src = "/images/lainnav.gif"
                         />
                         <a href="https://steamcommunity.com/id/ralilith/" target="_blank" rel="noopener noreferrer" className="hover:underline"> <p > ✿ steam </p></a>
                         <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer" className="hover:underline"> <p > ✿  lastfm </p></a>
@@ -182,7 +182,7 @@ function RouteComponent() {
 
     //                       <button onClick={start} className="underline">                            
     //                           WIP                            
-    //                           <img src={'/nekowip.gif'}
+    //                           <img src={'/images/nekowip.gif'}
     //                               width={400}
     //                               height={400}
     //                               alt=""

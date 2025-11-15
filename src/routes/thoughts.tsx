@@ -17,7 +17,7 @@ function RouteComponent() {
   
   function randomLain() : string {       
       //const idTest = getRandomInt(0,7) + 1
-      const lainpic = "/randompics/"+(getRandomIntCryp(0,18) + 1)+".png"
+      const lainpic = "/images/randompics/"+(getRandomIntCryp(0,18) + 1)+".png"
 
       const lainpics = [
           { id: 1, value: "/lain/catpics/lain1.png" },
@@ -37,7 +37,7 @@ function RouteComponent() {
 
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/sky3.jpg)",
+                backgroundImage: "url(/images/bgs/sky3.jpg)",
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',

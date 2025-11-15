@@ -47,7 +47,7 @@ export default function PopUp() {
                 > 
                     {bobQuotes[getRandomIntCryp(0,5)].value}
                 </div>
-                <img src="bob.png" 
+                <img src="/images/bob.png" 
                      className={`${Style.img} 
                                 -translate-x-[0%] -translate-y-[50%] sm:-translate-x-[0%] sm:-translate-y-[60%] 5xl:-translate-x-[10%] 5xl:-translate-y-[60%]
                                  max-w-[150px] 5xl:max-w-[350px]`}

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  cursor: url('/cursor4.png'), auto;
+  cursor: url('/images/cursor/cursor4.png'), auto;
 }
 
 @theme {

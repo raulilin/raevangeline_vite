@@ -45,7 +45,7 @@ export function Topbar(props:Props) {
                         )}
         >
             <Link to={"/me"} className="flex hover:underline"> 
-                <img src={'/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
                         
                         height={5}
                         alt=""
@@ -54,7 +54,7 @@ export function Topbar(props:Props) {
             </Link>            
             | 
             <Link to={"/momo"} className="flex hover:underline"> 
-                <img src={'/heart1.gif'}  className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/heart1.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
                 />
@@ -62,7 +62,7 @@ export function Topbar(props:Props) {
             </Link>            
             | 
             <Link to={"/thoughts"} className="flex hover:underline"> 
-                <img src={'/mailwrite.gif'}  className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/mailwrite.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
                 />
@@ -70,7 +70,7 @@ export function Topbar(props:Props) {
             </Link>            
             | 
             <Link to={"/experiences"} className="flex hover:underline"> 
-                <img src={'/moon.gif'}  className="w-[24px] 5xl:w-[34px] mr-2"
+                <img src={'/images/navbar/moon.gif'}  className="w-[24px] 5xl:w-[34px] mr-2"
                         height={5}
                         alt=""
                 />
@@ -81,7 +81,7 @@ export function Topbar(props:Props) {
                            BorderColor.find(record => record.name === props.borderColor)?.class
                         )}>
         <Link to={"/me"} className="flex"> 
-                <img src={'/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/tinyangel.gif'} className="w-[24px] 5xl:w-[34px]"
                         
                         height={5}
                         alt=""
@@ -90,7 +90,7 @@ export function Topbar(props:Props) {
             </Link>            
             | 
             <Link to={"/momo"} className="flex"> 
-                <img src={'/heart1.gif'}  className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/heart1.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
                 />
@@ -98,7 +98,7 @@ export function Topbar(props:Props) {
             </Link>            
             | 
             <Link to={"/thoughts"} className="flex"> 
-                <img src={'/mailwrite.gif'}  className="w-[24px] 5xl:w-[34px]"
+                <img src={'/images/navbar/mailwrite.gif'}  className="w-[24px] 5xl:w-[34px]"
                         height={5}
                         alt=""
                 />

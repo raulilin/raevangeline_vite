@@ -9,9 +9,9 @@ export default function Experiences(){
     }
 
     const ExpImages = [
-        {name : "down the rabbit hole (wip)", value: "websiteexperiences.png" },
-        {name : "???? ?????????", value: "websiteexperiencesnone.png" },
-        {name : "???? ?????????", value: "websiteexperiencesnone.png" },
+        {name : "down the rabbit hole (wip)", value: "/images/websiteexperiences.png" },
+        {name : "???? ?????????", value: "/images/websiteexperiencesnone.png" },
+        {name : "???? ?????????", value: "/images/websiteexperiencesnone.png" },
     ];
 
     return(
@@ -31,7 +31,7 @@ export default function Experiences(){
                     </p>
                     <p onClick={() => onClickItem(1)}
                        className={cn('text-xl w-fit transition duration-250 ease-in-out hover:bg-white hover:text-black',
-                                    (selected==1) ? 'border-4' : ''
+                                    (selected==1) ? 'border-4' : '' 
                                    )}> 
                         {'>'} ? - ????????? ?????????
                     </p>

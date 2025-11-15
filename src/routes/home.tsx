@@ -13,8 +13,8 @@ export const Route = createFileRoute('/home')({
 })
 
 function RouteComponent() {
-    preload('flowerwarm.webp', { as: 'image' }) // preloads this stylesheet
-    preload('ra/me3.png', { as: 'image' }) // preloads this stylesheet
+    preload('/images/bgs/flowerwarm.webp', { as: 'image' }) // preloads this stylesheet
+    preload('images/ra/me3.png', { as: 'image' }) // preloads this stylesheet
     let sideImg = getRandomIntCryp(0,7) + 1
 
     return (
@@ -26,7 +26,7 @@ function RouteComponent() {
             <div>
                 <aside className="ml-20 4xl:ml-0 mt-10 border-2 border-pink-900 h-fit hidden sm:flex bg-black">
                     <div className="flex items-center  justify-center">
-                        <img src={'/side/'+sideImg+'.png'} className='max-w-[400px] 5xl:max-w-[800px]'
+                        <img src={'/images/side/'+sideImg+'.png'} className='max-w-[400px] 5xl:max-w-[800px]'
                             alt=""
                         />
                     </div>
@@ -63,7 +63,7 @@ function RouteComponent() {
                             <Link to='/me'>
                             
                             <img className='w-[700px]'
-                                src='/ra/me2.png'
+                                src='/images/ra/me2.png'
                             />
                             </Link>
                         </div>
@@ -101,7 +101,7 @@ function RouteComponent() {
                             <Link to='/momo'>
                             
                             <img className='w-[700px]'
-                                src='/momo/momoclick.png'
+                                src='/images/momo/momoclick.png'
                             />
                             </Link>
                         </div>

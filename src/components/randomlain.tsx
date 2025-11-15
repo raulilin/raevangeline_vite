@@ -4,7 +4,7 @@ export function RandomLainPic() {
     const idTest = getRandomIntCryp(0,22) + 1
 
     function randomLain() : string {       
-        const lainpic = "/catpics/"+idTest+".png"
+        const lainpic = "/images/catpics/"+idTest+".png"
         return lainpic
     }
 

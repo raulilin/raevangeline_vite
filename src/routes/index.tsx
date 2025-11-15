@@ -9,11 +9,11 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   const bgGif = [
-      {value: "url(/bg/1.gif)" },
-      {value: "url(/bg/2.gif)" },
-      {value: "url(/bg/3.gif)" },
-      {value: "url(/bg/4.gif)" },
-      {value: "url(/bg/5.gif)" },        
+      {value: "url(/images/intro/1.gif)" },
+      {value: "url(/images/intro/2.gif)" },
+      {value: "url(/images/intro/3.gif)" },
+      {value: "url(/images/intro/4.gif)" },
+      {value: "url(/images/intro/5.gif)" },        
 ]       
   const bg : string = bgGif[getRandomIntCryp(0,4)].value;
 

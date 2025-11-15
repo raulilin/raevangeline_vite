@@ -5,8 +5,8 @@ import { useNavigate } from "@tanstack/react-router";
 
 export function SFXButton() {
   const clickSfx = [
-    {value: "/lain/goodlook.mp3" },
-    {value: "/lain/lainlaugh.mp3" },
+    {value: "/sounds/goodlook.mp3" },
+    {value: "/sounds/lainlaugh.mp3" },
     ]    
     const SFX : string = clickSfx[getRandomIntCryp(0,1)].value;
 

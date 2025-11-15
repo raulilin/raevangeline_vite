@@ -18,7 +18,7 @@ export function NekoButton() {
 
     return (
         <button className='' onClick={start} > 
-          <img src={'/nekoemptyhead.gif'}
+          <img src={'/images/nekoemptyhead.gif'}
               width={200}
               height={100}
               alt=""

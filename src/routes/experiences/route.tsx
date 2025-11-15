@@ -15,7 +15,7 @@ function RouteComponent() {
   return (
     <div className={`4xl:h-screen w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/IMG_6030_Edited.png)",
+                backgroundImage: "url(/images/bgs/experiences.webp)",
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',
