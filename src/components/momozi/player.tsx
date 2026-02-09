@@ -1,7 +1,7 @@
-import { createFileRoute } from '@tanstack/react-router'
 import testStyle from './Test.module.css'
-import { AudioPlayer, AudioPlayerRef } from 'react-audio-play'
-import { useEffect, useRef, useState } from 'react'
+import { AudioPlayer } from 'react-audio-play'
+import type { AudioPlayerRef } from 'react-audio-play'
+import { useRef, useState } from 'react'
 import { getRandomIntCryp } from '../../utils/utils';
 
 export default function PlayerMomozi() {

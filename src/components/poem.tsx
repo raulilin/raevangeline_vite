@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPoems } from "../api/api";
-import { getRandomIntCryp } from "../utils/utils";
-import { poems } from "../types/types";
+import type { poems } from "../types/types";
 
 export function Poem() {
     

@@ -1,4 +1,4 @@
-import { poems, songs, thoughts } from '../types/types';
+import type { poems, songs, thoughts } from '../types/types';
 import supabase from '../utils/supabase';
 
 export async function getThoughts(): Promise<thoughts[] | null>  {
@@ -28,6 +28,8 @@ export async function insertThought(pHandle:string, pTitle:string, pText:string)
   const { error } = await supabase
   .from('t_thoughts')
   .insert({ thoughts_handle:pHandle, thoughts_title:pTitle, thoughts_text:pText })
+  
+  console.log(error);
 }
 
 

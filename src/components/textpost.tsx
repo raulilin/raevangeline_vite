@@ -1,13 +1,12 @@
 
 import { useEffect, useState } from 'react'
-import { thoughts } from '../types/types'
+import type { thoughts } from '../types/types'
 import { getThoughts } from '../api/api'
 import supabase from '../utils/supabase'
 import { cn } from '../utils/utils'
 
 export default function ClientPosts() {
   const [isLoading, setIsLoading] = useState(true)
-  const [posts, setPosts] = useState<any>([])
   const [posts2, setPosts2] = useState<thoughts[] | null>([])
 
   useEffect(() => {

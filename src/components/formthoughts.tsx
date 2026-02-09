@@ -1,6 +1,6 @@
-import { AnyFieldApi, useForm } from "@tanstack/react-form"
+import type { AnyFieldApi } from "@tanstack/react-form"
+import { useForm } from "@tanstack/react-form"
 import { cn } from "../utils/utils";
-import { useEffect } from "react";
 import { insertThought } from "../api/api";
 
 export type thoughts = {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getSongList } from "../api/api"
 import { getRandomIntCryp, openInNewTab } from "../utils/utils"
-import { songs } from "../types/types"
+import type { songs } from "../types/types"
 
 export function SongButton() {
     const [songlist, setSonglist] = useState<songs[] | null>([])
