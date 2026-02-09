@@ -3,6 +3,8 @@ import { Topbar } from '../components/top';
 import fadeStyle from './Fade.module.css'
 import { useRef } from 'react';
 import { preload } from 'react-dom';
+import imgUrl from '../assets/me/me3.png';
+import imgBg from '../assets/bgs/sky5.webp';
 
 export const Route = createFileRoute('/me')({
   component: RouteComponent,
@@ -30,7 +32,7 @@ function RouteComponent() {
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
-                backgroundImage: "url(/images/bgs/sky5.webp)",
+                backgroundImage: `url("${imgBg}")`,
                 backgroundPosition: 'top',
                 backgroundRepeat: 'space repeat',
                 backgroundSize: 'cover',
@@ -54,7 +56,7 @@ function RouteComponent() {
                     <p className="ml-auto">X</p>
                 </div>
                 <div className='5xl:text-xl'>
-                    <img src='images/ra/me3.png'
+                    <img src={imgUrl}
                          className='max-w-[397px] 5xl:max-w-200'
                     />
                 </div>
