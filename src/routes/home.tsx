@@ -94,16 +94,12 @@ function RouteComponent() {
                     <RandomLainPic/>                    
                     <div className="border-2 border-pink-900 h-fit bg-black mr-5 sm:mr-0 5xl:max-w-170">
                         <div className="flex border-b-2 border-pink-900 p-1 text-lg 5xl:text-2xl">
-                            momo
+                            ..
                             <p className="ml-auto">X</p>
                         </div>
-                        <div className='5xl:text-xl'>
-                            <Link to='/momo'>
+                        <div className='5xl:text-xl p-12'>
                             
-                            <img className='w-[700px]'
-                                src='/images/momo/momoclick.png'
-                            />
-                            </Link>
+                            it was perfect, it destroyed me
                         </div>
                     </div>  
                 </section>      

@@ -15,8 +15,18 @@ function RouteComponent() {
 
   const start = () => {
       audio.current?.play(); 
-  }
-        
+  }     
+ 
+    const currentDate = new Date();    
+    const specificDate = new Date("2001-08-19T00:00:00");     
+
+    function getYearsBetweenDates(date1:Date, date2:Date) {
+        const diffInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
+        const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25; // Accounting for leap years
+        const years = diffInMilliseconds / millisecondsInYear;
+        return Math.round(years);
+    }
+
   return (
     <div className={`h-full w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
         style={{
@@ -80,7 +90,7 @@ function RouteComponent() {
                     </div>
                     <div className="rotate-180"> ∟</div>
                         <span className="flex flex-col p-5 gap-3 pt-auto text-sm xl:text-[15px] 5xl:text-xl">
-                            <p className='max-w-[500px]'> {'>'} my name is ra (ralilith, evangeline in some places or games), and i'm a 23 y/o frontend developer from Brazil!!</p>
+                            <p className='max-w-[500px]'> {'>'} my name is ra (ralilith, evangeline in some places or games), and i'm a {getYearsBetweenDates(specificDate,currentDate)} y/o frontend developer from Brazil!!</p>
                             <p className='max-w-[500px]'> {'>'} i looove web 1.0 aesthetics and this website pays homage to that era</p>
                             <img className='max-w-[100px] pb-4 ml-auto mr-auto'
                                 src = "images/moon2.gif"

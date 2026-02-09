@@ -8,118 +8,191 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThoughtsRouteImport } from './routes/thoughts'
+import { Route as MomoRouteImport } from './routes/momo'
+import { Route as MeRouteImport } from './routes/me'
+import { Route as JuliaRouteImport } from './routes/julia'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as ExperiencesRouteRouteImport } from './routes/experiences/route'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ExperiencesDtrhRouteImport } from './routes/experiences/dtrh'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as ThoughtsImport } from './routes/thoughts'
-import { Route as MomoImport } from './routes/momo'
-import { Route as MeImport } from './routes/me'
-import { Route as HomeImport } from './routes/home'
-import { Route as ExperiencesRouteImport } from './routes/experiences/route'
-import { Route as IndexImport } from './routes/index'
-import { Route as ExperiencesDtrhImport } from './routes/experiences/dtrh'
-
-// Create/Update Routes
-
-const ThoughtsRoute = ThoughtsImport.update({
+const ThoughtsRoute = ThoughtsRouteImport.update({
   id: '/thoughts',
   path: '/thoughts',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const MomoRoute = MomoImport.update({
+const MomoRoute = MomoRouteImport.update({
   id: '/momo',
   path: '/momo',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const MeRoute = MeImport.update({
+const MeRoute = MeRouteImport.update({
   id: '/me',
   path: '/me',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const HomeRoute = HomeImport.update({
+const JuliaRoute = JuliaRouteImport.update({
+  id: '/julia',
+  path: '/julia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
   id: '/home',
   path: '/home',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const ExperiencesRouteRoute = ExperiencesRouteImport.update({
+const ExperiencesRouteRoute = ExperiencesRouteRouteImport.update({
   id: '/experiences',
   path: '/experiences',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const ExperiencesDtrhRoute = ExperiencesDtrhImport.update({
+const ExperiencesDtrhRoute = ExperiencesDtrhRouteImport.update({
   id: '/dtrh',
   path: '/dtrh',
   getParentRoute: () => ExperiencesRouteRoute,
 } as any)
 
-// Populate the FileRoutesByPath interface
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRouteRouteWithChildren
+  '/home': typeof HomeRoute
+  '/julia': typeof JuliaRoute
+  '/me': typeof MeRoute
+  '/momo': typeof MomoRoute
+  '/thoughts': typeof ThoughtsRoute
+  '/experiences/dtrh': typeof ExperiencesDtrhRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRouteRouteWithChildren
+  '/home': typeof HomeRoute
+  '/julia': typeof JuliaRoute
+  '/me': typeof MeRoute
+  '/momo': typeof MomoRoute
+  '/thoughts': typeof ThoughtsRoute
+  '/experiences/dtrh': typeof ExperiencesDtrhRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRouteRouteWithChildren
+  '/home': typeof HomeRoute
+  '/julia': typeof JuliaRoute
+  '/me': typeof MeRoute
+  '/momo': typeof MomoRoute
+  '/thoughts': typeof ThoughtsRoute
+  '/experiences/dtrh': typeof ExperiencesDtrhRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | '/experiences'
+    | '/home'
+    | '/julia'
+    | '/me'
+    | '/momo'
+    | '/thoughts'
+    | '/experiences/dtrh'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/experiences'
+    | '/home'
+    | '/julia'
+    | '/me'
+    | '/momo'
+    | '/thoughts'
+    | '/experiences/dtrh'
+  id:
+    | '__root__'
+    | '/'
+    | '/experiences'
+    | '/home'
+    | '/julia'
+    | '/me'
+    | '/momo'
+    | '/thoughts'
+    | '/experiences/dtrh'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  ExperiencesRouteRoute: typeof ExperiencesRouteRouteWithChildren
+  HomeRoute: typeof HomeRoute
+  JuliaRoute: typeof JuliaRoute
+  MeRoute: typeof MeRoute
+  MomoRoute: typeof MomoRoute
+  ThoughtsRoute: typeof ThoughtsRoute
+}
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/experiences': {
-      id: '/experiences'
-      path: '/experiences'
-      fullPath: '/experiences'
-      preLoaderRoute: typeof ExperiencesRouteImport
-      parentRoute: typeof rootRoute
-    }
-    '/home': {
-      id: '/home'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeImport
-      parentRoute: typeof rootRoute
-    }
-    '/me': {
-      id: '/me'
-      path: '/me'
-      fullPath: '/me'
-      preLoaderRoute: typeof MeImport
-      parentRoute: typeof rootRoute
+    '/thoughts': {
+      id: '/thoughts'
+      path: '/thoughts'
+      fullPath: '/thoughts'
+      preLoaderRoute: typeof ThoughtsRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/momo': {
       id: '/momo'
       path: '/momo'
       fullPath: '/momo'
-      preLoaderRoute: typeof MomoImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof MomoRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/thoughts': {
-      id: '/thoughts'
-      path: '/thoughts'
-      fullPath: '/thoughts'
-      preLoaderRoute: typeof ThoughtsImport
-      parentRoute: typeof rootRoute
+    '/me': {
+      id: '/me'
+      path: '/me'
+      fullPath: '/me'
+      preLoaderRoute: typeof MeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/julia': {
+      id: '/julia'
+      path: '/julia'
+      fullPath: '/julia'
+      preLoaderRoute: typeof JuliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/experiences/dtrh': {
       id: '/experiences/dtrh'
       path: '/dtrh'
       fullPath: '/experiences/dtrh'
-      preLoaderRoute: typeof ExperiencesDtrhImport
-      parentRoute: typeof ExperiencesRouteImport
+      preLoaderRoute: typeof ExperiencesDtrhRouteImport
+      parentRoute: typeof ExperiencesRouteRoute
     }
   }
 }
-
-// Create and export the route tree
 
 interface ExperiencesRouteRouteChildren {
   ExperiencesDtrhRoute: typeof ExperiencesDtrhRoute
@@ -132,129 +205,15 @@ const ExperiencesRouteRouteChildren: ExperiencesRouteRouteChildren = {
 const ExperiencesRouteRouteWithChildren =
   ExperiencesRouteRoute._addFileChildren(ExperiencesRouteRouteChildren)
 
-export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/experiences': typeof ExperiencesRouteRouteWithChildren
-  '/home': typeof HomeRoute
-  '/me': typeof MeRoute
-  '/momo': typeof MomoRoute
-  '/thoughts': typeof ThoughtsRoute
-  '/experiences/dtrh': typeof ExperiencesDtrhRoute
-}
-
-export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/experiences': typeof ExperiencesRouteRouteWithChildren
-  '/home': typeof HomeRoute
-  '/me': typeof MeRoute
-  '/momo': typeof MomoRoute
-  '/thoughts': typeof ThoughtsRoute
-  '/experiences/dtrh': typeof ExperiencesDtrhRoute
-}
-
-export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/experiences': typeof ExperiencesRouteRouteWithChildren
-  '/home': typeof HomeRoute
-  '/me': typeof MeRoute
-  '/momo': typeof MomoRoute
-  '/thoughts': typeof ThoughtsRoute
-  '/experiences/dtrh': typeof ExperiencesDtrhRoute
-}
-
-export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/experiences'
-    | '/home'
-    | '/me'
-    | '/momo'
-    | '/thoughts'
-    | '/experiences/dtrh'
-  fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/experiences'
-    | '/home'
-    | '/me'
-    | '/momo'
-    | '/thoughts'
-    | '/experiences/dtrh'
-  id:
-    | '__root__'
-    | '/'
-    | '/experiences'
-    | '/home'
-    | '/me'
-    | '/momo'
-    | '/thoughts'
-    | '/experiences/dtrh'
-  fileRoutesById: FileRoutesById
-}
-
-export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ExperiencesRouteRoute: typeof ExperiencesRouteRouteWithChildren
-  HomeRoute: typeof HomeRoute
-  MeRoute: typeof MeRoute
-  MomoRoute: typeof MomoRoute
-  ThoughtsRoute: typeof ThoughtsRoute
-}
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ExperiencesRouteRoute: ExperiencesRouteRouteWithChildren,
   HomeRoute: HomeRoute,
+  JuliaRoute: JuliaRoute,
   MeRoute: MeRoute,
   MomoRoute: MomoRoute,
   ThoughtsRoute: ThoughtsRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/experiences",
-        "/home",
-        "/me",
-        "/momo",
-        "/thoughts"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/experiences": {
-      "filePath": "experiences/route.tsx",
-      "children": [
-        "/experiences/dtrh"
-      ]
-    },
-    "/home": {
-      "filePath": "home.tsx"
-    },
-    "/me": {
-      "filePath": "me.tsx"
-    },
-    "/momo": {
-      "filePath": "momo.tsx"
-    },
-    "/thoughts": {
-      "filePath": "thoughts.tsx"
-    },
-    "/experiences/dtrh": {
-      "filePath": "experiences/dtrh.tsx",
-      "parent": "/experiences"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

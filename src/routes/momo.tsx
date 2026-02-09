@@ -13,13 +13,10 @@ export const Route = createFileRoute('/momo')({
 function RouteComponent() {
     const playerRef = useRef<AudioPlayerRef>(null);
     const ost = [
-        {value: "/sounds/meeting_place.mp3" },
-        {value: "/sounds/limerance.mp3" },
-        {value: "/sounds/you_were_there.mp3" },
-        {value: "/sounds/arabesque.mp3" },
+        {value: "/sounds/a_love_suicide.mp3" }
     ];
 
-    const [song, setSong] = useState<any>(["/sounds/meeting_place.mp3"]);
+    const [song, setSong] = useState<any>([ost[0].value]);
 
     const handleEnd = () => {
         setSong(ost[getRandomInt(0,ost.length)].value)
@@ -42,17 +39,8 @@ function RouteComponent() {
             }}
     >
         <Topbar borderColor='warm-orange'/>
-
         <div className= {`w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15 `}>
-            I dedicate this page to my beloved doll, <em className='font-bold 5xl:text-5xl'>Julia </em>
-            <div className='flex w-full'>
-                <img className='ml-20 mr-auto w-[20px] 5xl:w-[40px]'
-                    src = "/images/momo/heart.gif"
-                />
-                <img className='mr-20 ml-auto w-[20px] 5xl:w-[40px]'
-                    src = "/images/momo/heart.gif"
-                />
-            </div>
+            <em className='font-bold 5xl:text-5xl'>Thank you </em>
             <AudioPlayer color="#e7b05d"
                          sliderColor="#e7b05d"
                          className={`${momoStyle.customstyle} border-2 ml-auto mr-auto mt-7`} 
@@ -63,8 +51,24 @@ function RouteComponent() {
                          volume={7}
                          volumePlacement='bottom'
                          preload='none'
-            />
-            <p className='text-sm 5xl:text-lg'>Playing: {song}</p>
+            />            
+            <p className='text-sm 5xl:text-lg'>Playing: {song}</p>            
+        </div>
+
+        <div className='h-full w-full relative   blur-lg'>
+
+        <div className= {`blur-lg w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15 `}>
+            I dedicate this page to my beloved doll, <em className='font-bold 5xl:text-5xl'>Julia </em>
+            <div className='flex w-full'>
+                <img className='ml-20 mr-auto w-[20px] 5xl:w-[40px]'
+                    src = "/images/momo/heart.gif"
+                />
+                <img className='mr-20 ml-auto w-[20px] 5xl:w-[40px]'
+                    src = "/images/momo/heart.gif"
+                />
+            </div>
+
+
         </div>
         <img className='ml-auto mr-auto'
             src = "/images/momo/heartbar3.gif"
@@ -81,7 +85,7 @@ function RouteComponent() {
                 width={70}
             />
         </div>
-        <div className=' grid  ml-15 sm:ml-30 mr-15 sm:mr-30 grid-cols-1 sm:grid-cols-3 gap-20 pb-60 pt-30'>
+        <div className=' grid ml-15 sm:ml-30 mr-15 sm:mr-30 grid-cols-1 sm:grid-cols-3 gap-20 pb-60 pt-30'>
             <img className='border-3 rotate-6 '
                 src="/images/momo/piccrew1.png"
                 width={750}
@@ -145,7 +149,7 @@ function RouteComponent() {
             width={900}
         />
 
-        <div className= {`w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15`}>
+        <div className= {`blur-lg w-full text-center font-semibold ${momoStyle.shadow} p-8 pb-15`}>
             Thank you for existing, <em className='font-bold'>I love you</em>                                    
         </div>
         {/* <div className= {`w-full text-center font-semibold ${momoStyle.shadow_sub} p-8 pb-15`}>
@@ -154,7 +158,7 @@ function RouteComponent() {
         <div className= {`w-full text-center font-semibold ${momoStyle.shadow} text-end pr-10 pb-10 5xl:pr-350`}>
             <em className='font-bold'>-seu momo</em>            
         </div>                             
-
+    </div>
     </div>
   )
 }

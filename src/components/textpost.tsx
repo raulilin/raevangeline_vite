@@ -45,7 +45,7 @@ export default function ClientPosts() {
     isLoading ? <p>Loading</p> : 
     <div className='text-white space-y-2'>
         {posts2?.map (data => 
-          <pre key={data.id} className='border-b p-3 shadow-xl backdrop-blur-xs hover:backdrop-blur-sm '>
+          <pre key={data.id} className='border-b p-3 shadow-2xl backdrop-blur-md hover:backdrop-blur-sm'>
           {/* <div className='flex'>{'>'} {data.handle} : <b className='ml-auto'>{data.date}</b> </div> */}
           
           <div className='grid grid-cols-2 sm:flex underline decoration-1'> 
@@ -55,14 +55,12 @@ export default function ClientPosts() {
                                data.momo ? 'text-pink-600': '',                                                              
                               )}
               > 
-              {/* ehMomo(data.handle) ? 'text-pink-600': '' */}
-              
-                {data.handle}
+                {data.handle.trimEnd()}
               </pre>)
             : 
               (<>Anon</>)
             }
-            <b className='ml-auto'>date: {localizarData( data.date )}</b> 
+            <b className='ml-auto text-wrap text-right'>date: {localizarData( data.date )}</b> 
           </div>
 
             {data.title ?  
@@ -73,8 +71,8 @@ export default function ClientPosts() {
               ('')
             }
 
-            <pre key={data.id} className='text-wrap break-all'>
-                {data.text}
+            <pre key={data.id} className=' text-wrap'>
+                {data.text.trimEnd()}
             </pre>
           </pre>
         )}

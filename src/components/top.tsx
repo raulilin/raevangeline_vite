@@ -14,6 +14,8 @@ export function Topbar(props:Props) {
         {"name":"blue", "class":"border-blue-900"},
         {"name":"warm-orange", "class":"border-warm-orange"},
         {"name":"slate", "class":"border-slate-900"},
+        {"name":"green", "class":"border-green-800"},
+        {"name":"red", "class":"border-red-800"},
       ]
 
     return (        
